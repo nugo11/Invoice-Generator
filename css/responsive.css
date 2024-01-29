@@ -12,30 +12,74 @@
     .signinright {
       width: 70%;
     }
-    
-    .invoice {
-        grid-template-columns: auto auto;
-    }
 
     .invociehead {
         display: flex;
         flex-direction: column;
+        grid-template-columns: auto auto;
     }
 
     .right {
         text-align: left;
       }
 
+      .logined {
+        padding: 10px;
+      }
+      .invoice {
+        padding: 0px;
+      }
+
       .invociedate {
         align-items: normal;
       }
 
-      .table {
-        overflow-x:auto;
-        width: 100vh;
+      tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
       }
-      table {
-        width: 1000px;
+      
+      table tr:nth-child(1) {
+        display: none;
+      }
+
+      table tr {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto auto;
+        align-items: end;
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      table td:nth-child(1) {
+        grid-column: 1 / 4;
+      }
+
+      table td:nth-child(2)::before {
+        content: '$';
+        opacity: 0.5;
+        font-size: 12px;
+      }
+
+      table td:nth-child(3)::before {
+        content: 'X';
+        opacity: 0.5;
+        font-size: 12px;
+      }
+
+      table td {
+        width: 95%;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        gap: 5%;
+      }
+
+      table input {
+        width: 100%;
       }
   }
   
