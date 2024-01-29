@@ -16,20 +16,20 @@ document
   .forEach((file) => file.setAttribute("autocomplete", "off"));
 
 submitSignin.addEventListener("click", () => {
-  // if (
-  //   EnterYourCompanyName.value === "" ||
-  //   EnterYourID.value === "" ||
-  //   currency.value === "noresult" ||
-  //   peyment.value === "noresult"
-  // ) {
-  //   EnterYourCompanyName.style.borderBottom = "2px solid red";
-  //   EnterYourID.style.borderBottom = "2px solid red";
-  //   currency.style.borderBottom = "2px solid red";
-  //   peyment.style.borderBottom = "2px solid red";
-  // } else {
+  if (
+    EnterYourCompanyName.value === "" ||
+    EnterYourID.value === "" ||
+    currency.value === "noresult" ||
+    peyment.value === "noresult"
+  ) {
+    EnterYourCompanyName.style.borderBottom = "2px solid red";
+    EnterYourID.style.borderBottom = "2px solid red";
+    currency.style.borderBottom = "2px solid red";
+    peyment.style.borderBottom = "2px solid red";
+  } else {
     signin.style.display = "none";
     logined.style.display = "flex";
-  // }
+  }
 
   let companyname = document.getElementById("companyname");
   let companyid = document.getElementById("companyid");
