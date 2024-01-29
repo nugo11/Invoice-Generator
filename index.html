@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free online invoice generator</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="signin">
+        <div class="signinleft"></div>
+        <div class="signinright">
+        <div class="headnavigation">
+          <b style="color: #a8b1ff">Sign In</b> > <b>Fill Invoice</b>
+        </div>
+        <h1>Invoice Generator</h1>
+        <input type="text" placeholder="Enter your or company name" id="EnterYourCompanyName" />
+        <input type="text" placeholder="Identification or personal number" id="EnterYourID" />
+        <select id="payment">
+          <option value="noresult">Select payment method</option>
+          <option value="cash">Cash</option>
+          <option value="bank">Bank Transfer</option>
+        </select>
+        <select id="currency" name="currency">
+          <option value="noresult">Select a currency</option>
+          <option value="GEL">Georgian Lari (GEL)</option>
+          <option value="USD">US Dollar (USD)</option>
+          <option value="EUR">Euro (EUR)</option>
+          <option value="JPY">Japanese Yen (JPY)</option>
+          <option value="GBP">British Pound (GBP)</option>
+          <option value="AUD">Australian Dollar (AUD)</option>
+          <option value="CAD">Canadian Dollar (CAD)</option>
+          <option value="CHF">Swiss Franc (CHF)</option>
+          <option value="CNY">Chinese Yuan (CNY)</option>
+          <option value="SEK">Swedish Krona (SEK)</option>
+          <option value="NZD">New Zealand Dollar (NZD)</option>
+          <option value="NOK">Norwegian Krone (NOK)</option>
+          <option value="INR">Indian Rupee (INR)</option>
+          <option value="BRL">Brazilian Real (BRL)</option>
+          <option value="ZAR">South African Rand (ZAR)</option>
+          <option value="RUB">Russian Ruble (RUB)</option>
+          <option value="TRY">Turkish Lira (TRY)</option>
+          <option value="MXN">Mexican Peso (MXN)</option>
+          <option value="SGD">Singapore Dollar (SGD)</option>
+          <option value="HKD">Hong Kong Dollar (HKD)</option>
+          <option value="PLN">Polish Złoty (PLN)</option>
+          <option value="THB">Thai Baht (THB)</option>
+          <option value="IDR">Indonesian Rupiah (IDR)</option>
+          <option value="MYR">Malaysian Ringgit (MYR)</option>
+          <option value="PHP">Philippine Peso (PHP)</option>
+          <option value="HUF">Hungarian Forint (HUF)</option>
+          <option value="CZK">Czech Koruna (CZK)</option>
+          <option value="ILS">Israeli New Shekel (ILS)</option>
+          <option value="CLP">Chilean Peso (CLP)</option>
+          <option value="AED">United Arab Emirates Dirham (AED)</option>
+          <option value="SAR">Saudi Riyal (SAR)</option>
+          <option value="KRW">South Korean Won (KRW)</option>
+        </select>
+        <button id="submitSignin">Next</button>
+      </div>
+    </div>
+      <div class="logined" style="display: none">
+        <div class="headnavigation">
+          <b>Sign In</b> > <b style="color: #a8b1ff">Fill Invoice</b>
+        </div>
+        <div class="invoice">
+          <div class="invociehead">
+            <div class="left">
+              <div class="companynameandid">
+                <div id="companyname"></div>
+                <div id="companyid"></div>
+              </div>
+
+              <div class="recipment">
+                <span>Recipment name:</span
+                ><input
+                  type="text"
+                  id="recName"
+                  placeholder="Enter recipment or company name"
+                />
+                <span>Recipment ID:</span
+                ><input
+                  type="text"
+                  id="recID"
+                  placeholder="Recipment identification or personal number"
+                />
+                <span>Recipment Address:</span
+                ><input id="recAdress" type="text" placeholder="Enter recipment adress" />
+              </div>
+            </div>
+
+            <div class="right">
+              <div class="invoicenumber">
+                <span>INVOICE #</span>
+                <input id="invNum" type="number" value="2" placeholder="Enter number" />
+              </div>
+
+              <div class="invociedate">
+                <span>Start Date</span>
+                <input id="stDate" type="date" />
+
+                <span>Expire Date</span>
+                <input id="exDate" type="date" />
+              </div>
+            </div>
+          </div>
+          <div class="invoicewall">
+            <div class="table">
+              <table cellspacing="0" cellpadding="0">
+                <tr class="trdetect">
+                  <th style="width:70%"><input id="custominput" maxlength="50" type="text" value="Item"></th>
+                  <th style="width:10%"><input id="custominput" maxlength="20" type="text" value="Quantity"></th>
+                  <th style="width:10%"><input id="custominput" maxlength="20" type="text" value="Rate"></th>
+                  <th style="width:10%"><input id="custominput" maxlength="20" type="text" value="Amount"></th>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      class="disableItemInput"
+                      type="text"
+                      placeholder="Description of service or product..."
+                      style="width:100%"
+                    />
+                  </td>
+                  <td class="counttrs"><input class="countnumbers1" type="number" value="1"></td>
+                  <td><input class="countnumbers2" type="number" value="1"></td>
+                  <td id="lasttdtable">
+                    <p class="tdamount">0</p>
+                  </td>
+                </tr>
+              </table>
+              <button id="addrow">+ Line Item (Max 15)</button>
+              <button id="delrow">Remove Row</button>
+            </div>
+            <div class="wallfooter">
+              <div class="wallleft">
+                <div class="cash">
+                  <p>Payment will be made in cash</p>
+                </div>
+                <div class="bank">
+                  <input type="text" placeholder="Bank name" />
+                <input
+                  type="text"
+                  placeholder="Recipient bank transfer number"
+                />
+                </div>
+              </div>
+              <div class="wallright">
+                <span
+                  >Subtotal:
+                  <p id="subtotal">0</p
+                ></span> 
+                <span>Tax (%): <input type="number" id="tax" value="0" /></span>
+                <span
+                  >Total:
+                  <p id="total">0</p
+                > <p id="putCurrency"></p></span>
+              </div>
+            </div>
+            <button id="fullsubmit">Next</button>
+            <button id="Printbutton" style="display: none;">Download invoice</button>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+          </div>
+        </div>
+      </div>
+      
+    <script src="./js/main.js"></script>
+  </body>
+</html>

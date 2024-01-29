@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  background-color: #e5e8f0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.headnavigation {
+  padding: 30px;
+  cursor: default;
+  font-size: 14px;
+  color: rgb(184, 184, 184);
+}
+
+.signin {
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(233, 240, 255, 1) 35%,
+    rgba(248, 250, 255, 1) 100%
+  );
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.signinleft {
+  background-image: url(../img/login.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #91bbc7;
+  height: 95vh;
+  width: 95%;
+  border-radius: 40px;
+  margin: 10px;
+}
+
+.signinright {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signinright h1 {
+  margin-bottom: 20px;
+}
+
+.signin input {
+  width: 90%;
+  height: 45px;
+  border: none;
+  background-color: white;
+  box-shadow: 2px 5px 11px 1px #a8b1ff30;
+  border-radius: 10px;
+  padding: 30px;
+  outline: none;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+.signin input:focus {
+  box-shadow: 2px 5px 20px 1px #a8b1ff94;
+}
+
+#custominput {
+  background: none;
+  outline: none;
+  color: white;
+  border: none;
+  margin: none;
+  width: 100%;
+  padding: none;
+}
+
+#custominput:focus {
+  box-shadow: none;
+}
+
+.signin select {
+  width: 90%;
+  height: 45px;
+  border: none;
+  
+  box-shadow: 2px 5px 11px 1px #a8b1ff30;
+  border-radius: 10px;
+  padding: 12px;
+  outline: none;
+  margin-bottom: 20px;
+  appearance: none;
+}
+
+.signin button {
+  margin-bottom: 20px;
+  width: 90%;
+  height: 45px;
+  background-color: #f56965;
+  border: none;
+  box-shadow: 2px 5px 20px 1px #f56a6594;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  transition: 0.5s;
+}
+
+.signin button:hover {
+  background-color: #ff605b;
+  box-shadow: 2px 5px 20px 1px #ff464094;
+}
+
+.logined {
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  flex-direction: column;
+  width: 65%;
+}
+
+.invoice {
+  padding: 30px;
+}
+
+.invociehead {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+#companyname {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+#companyid {
+  color: #8367c7;
+  font-weight: bold;
+}
+
+.recipment {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipment span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #57418d;
+}
+
+.recipment input {
+  width: 90%;
+  height: 25px;
+  border: none;
+  border-bottom: 2px solid rgb(175, 175, 175);
+  outline: none;
+  margin-bottom: 30px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: right;
+}
+
+.invociedate {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.invociedate input {
+  margin-bottom: 40px;
+  width: fit-content;
+  padding: 8px 15px 8px 15px;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 5px;
+}
+
+.invociedate span {
+  font-size: 13px;
+  color: gray;
+}
+
+.invoicenumber span {
+  font-weight: bold;
+}
+
+.invoicenumber input {
+  width: 65px;
+  padding: 10px 15px 10px 15px;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+}
+
+table tr:nth-child(1) {
+  background-color: #57418d;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  padding: 10px;
+}
+
+#putCurrency {
+  font-size: 15px;
+  color: #f56965;
+  font-weight: bold;
+}
+
+table input {
+  border: none;
+  border-bottom: 2px solid rgb(175, 175, 175);
+  outline: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#lasttdtable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+#delrow {
+  background: none;
+  border: none;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  font-weight: bold;
+  background: #b80909;
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+#delrow:hover {
+  background: #850c0c;
+}
+
+#addrow {
+  background-color: #67c488;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+}
+
+#addrow:hover {
+  background-color: #51af72;
+}
+
+.wallfooter {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.wallright {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  gap: 10px;
+}
+
+.wallright span {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  align-items: center;
+}
+
+#total, #subtotal {
+  font-weight: bold;
+}
+
+.wallleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.wallleft input {
+  width: 90%;
+  height: 25px;
+  border: none;
+  border-bottom: 2px solid rgb(175, 175, 175);
+  outline: none;
+}
+
+.wallright input {
+  width: 70px;
+  padding: 8px 15px 8px 15px;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 5px;
+}
+
+#fullsubmit,
+#Printbutton {
+  margin-top: 40px;
+  width: 100%;
+  height: 45px;
+  background-color: #7edfa0;
+  border: none;
+  box-shadow: 5px 5px 0px 0px #c2f8cb;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  transition: 0.5s;
+}
+
+#fullsubmit:hover,
+#Printbutton:hover {
+  background-color: #71bb8b;
+  box-shadow: 5px 5px 0px 0px #5c8362;
+}
+
+.preview {
+  background: white;
+  border-radius: 10px;
+}
+
+@media (width < 1350px) {
+  .logined {
+    width: 100%;
+  }
+}
+
+
+@media (width < 1150px) {
+  body {
+    background-color: white;
+  }
+  .signinright {
+    width: 70%;
+  }
+}
+
+@media (width < 750px) {
+  .signinright {
+    width: 100%;
+  }
+}
+
+@media (width < 600px) {
+  .signin {
+  display: flex;
+  flex-direction: column;
+}
+
+.signinleft {
+  height: 90px;
+}
+}
