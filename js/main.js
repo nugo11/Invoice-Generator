@@ -44,10 +44,6 @@ submitSignin.addEventListener("click", () => {
     cash.style.display = "none";
   }
 
-  if (document.body.clientWidth < 1000) {
-    viewport = document.querySelector("meta[name=viewport]");
-    viewport.setAttribute('content', 'width=device-width, initial-scale=0.4, user-scalable=0');
-  }
 });
 
 let recName = document.getElementById("recName");
