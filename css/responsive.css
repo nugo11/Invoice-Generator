@@ -8,6 +8,7 @@
   @media (width < 1170px) {
     body {
       background-color: white;
+      width: 100vh;
     }
     .signinright {
       width: 70%;
