@@ -1,0 +1,59 @@
+@media (width < 1350px) {
+    .logined {
+      width: 100%;
+    }
+  }
+  
+  
+  @media (width < 1170px) {
+    body {
+      background-color: white;
+    }
+    .signinright {
+      width: 70%;
+    }
+    
+    .invoice {
+        grid-template-columns: auto auto;
+    }
+
+    .invociehead {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right {
+        text-align: left;
+      }
+
+      .invociedate {
+        align-items: normal;
+      }
+
+      .table {
+        overflow-x:auto;
+        width: 100vh;
+      }
+      table {
+        width: 1000px;
+      }
+  }
+  
+  @media (width < 750px) {
+    .signinright {
+      width: 100%;
+    }
+  }
+  
+  @media (width < 600px) {
+    .signin {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signinleft {
+    height: 90px;
+  }
+  }
+
+  

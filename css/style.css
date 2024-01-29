@@ -235,6 +235,14 @@ table th {
   padding: 10px;
 }
 
+#bigth {
+  width: 70%;
+}
+
+#smallth {
+  width: 10%;
+}
+
 #putCurrency {
   font-size: 15px;
   color: #f56965;
@@ -360,37 +368,4 @@ table input {
 .preview {
   background: white;
   border-radius: 10px;
-}
-
-@media (width < 1350px) {
-  .logined {
-    width: 100%;
-  }
-}
-
-
-@media (width < 1150px) {
-  body {
-    background-color: white;
-  }
-  .signinright {
-    width: 70%;
-  }
-}
-
-@media (width < 750px) {
-  .signinright {
-    width: 100%;
-  }
-}
-
-@media (width < 600px) {
-  .signin {
-  display: flex;
-  flex-direction: column;
-}
-
-.signinleft {
-  height: 90px;
-}
 }
