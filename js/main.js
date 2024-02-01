@@ -137,8 +137,8 @@ function updateSubtotal() {
   );
 
   subtotal.textContent = subtotalValueAr;
-  subtotal1.textContent =
-    (Number(tax.value) / 100) * subtotalValueAr + subtotalValueAr;
+  let subt1 = (Number(tax.value) / 100) * subtotalValueAr + subtotalValueAr;
+  subtotal1.textContent = subt1.toFixed(1);
 }
 
 let delrow = document.getElementById("delrow");
@@ -187,7 +187,9 @@ Printbutton.addEventListener("click", () => {
     html2canvas:  { scale: 3, scrollY: 0 },
     jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
 };
+setTimeout(() => {
   html2pdf().from(element).set(opt).save();
+}, 1000);
   Printbutton.style.display = 'none';
   viewport = document.querySelector("meta[name=viewport]");
 viewport.setAttribute('content', 'width=device-width, initial-scale=0.1, maximum-scale=0.1');
@@ -197,5 +199,5 @@ document.getElementsByClassName('logined')[0].style.width = '100%';
 document.getElementById('hideInpdf').style.display = 'none';
 setTimeout(() => {
   window.location.reload();
-}, 1000);
+}, 2000);
 });
