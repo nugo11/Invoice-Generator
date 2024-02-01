@@ -81,6 +81,20 @@
       table input {
         width: 100%;
       }
+
+      .wallfooter {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .wallright {
+        margin-top: 40px;
+      }
+
+      .wallright span {
+        justify-content:start;
+      }
+
   }
   
   @media (width < 750px) {

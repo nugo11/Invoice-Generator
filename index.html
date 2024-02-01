@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="removeClass">
       <div class="signin">
         <div class="signinleft"></div>
         <div class="signinright">
@@ -62,7 +62,7 @@
       </div>
     </div>
       <div class="logined" style="display: none">
-        <div class="headnavigation">
+        <div class="headnavigation" id="hideInpdf">
           <b>Sign In</b> > <b style="color: #a8b1ff">Fill Invoice</b>
         </div>
         <div class="invoice">
@@ -112,7 +112,7 @@
                 <tr class="trdetect">
                   <th id="bigth"><input id="custominput" maxlength="50" type="text" value="Item"></th>
                   <th id="smallth"><input id="custominput" maxlength="20" type="text" value="Quantity"></th>
-                  <th id="smallth"style="width:10%"><input id="custominput" maxlength="20" type="text" value="Rate"></th>
+                  <th id="smallth"><input id="custominput" maxlength="20" type="text" value="Rate"></th>
                   <th id="smallth"><input id="custominput" maxlength="20" type="text" value="Amount"></th>
                 </tr>
                 <tr>
@@ -127,7 +127,7 @@
                   <td class="counttrs"><input class="countnumbers1" type="number" value="1"></td>
                   <td><input class="countnumbers2" type="number" value="1"></td>
                   <td id="lasttdtable">
-                    <p class="tdamount">0</p>
+                    <p class="tdamount">0</p><p class="putCurrency"></p>
                   </td>
                 </tr>
               </table>
@@ -156,7 +156,7 @@
                 <span
                   >Total:
                   <p id="total">0</p
-                > <p id="putCurrency"></p></span>
+                > <p class="putCurrency"></p></span>
               </div>
             </div>
             <button id="fullsubmit">Next</button>

@@ -33,10 +33,13 @@ submitSignin.addEventListener("click", () => {
 
   let companyname = document.getElementById("companyname");
   let companyid = document.getElementById("companyid");
-  let putCurrency = document.getElementById("putCurrency");
+  let putCurrency = document.getElementsByClassName("putCurrency");
   companyname.textContent = EnterYourCompanyName.value;
   companyid.textContent = EnterYourID.value;
-  putCurrency.textContent = currency.value;
+  for(let pcur = 0; pcur < putCurrency.length; pcur++) {
+  putCurrency[pcur].textContent = currency.value;
+  console.log('nugo');
+  }
 
   if (peyment.value === "cash") {
     bank.style.display = "none";
@@ -73,7 +76,7 @@ addrow.addEventListener("click", () => {
   let addrowintable = document.createElement("tr");
   let trs = document.getElementsByClassName("counttrs");
   let trtextin =
-    '<td><input class="disableItemInput" type="text" placeholder="Description of service or product..."style=width:100%><td class="counttrs"><input class="countnumbers1" type=number value=1><td><input class="countnumbers2" type=number value=1><td id="lasttdtable"><p class=tdamount>0</p>';
+    '<td><input class="disableItemInput" type="text" placeholder="Description of service or product..."style=width:100%><td class="counttrs"><input class="countnumbers1" type=number value=1><td><input class="countnumbers2" type=number value=1><td id="lasttdtable"><p class=tdamount>0</p><p class="putCurrency"></p>';
 
   if (trs.length === 15) {
     addrow1.textContent = "No more can be added";
@@ -86,13 +89,21 @@ addrow.addEventListener("click", () => {
   }
 
   countNumbers();
+
+  let putCurrency = document.getElementsByClassName("putCurrency");
+  companyname.textContent = EnterYourCompanyName.value;
+  companyid.textContent = EnterYourID.value;
+  for(let pcur = 0; pcur < putCurrency.length; pcur++) {
+  putCurrency[pcur].textContent = currency.value;
+  console.log('nugo');
+  }
 });
 
 function countNumbers() {
   let countnumbers1 = document.getElementsByClassName("countnumbers1");
   let countnumbers2 = document.getElementsByClassName("countnumbers2");
   let tdamount = document.getElementsByClassName("tdamount");
-
+  
   for (let t = 0; t < countnumbers1.length; t++) {
     countnumbers1[t].addEventListener("change", () => {
       let WholeNum = countnumbers1[t].value * countnumbers2[t].value;
@@ -168,7 +179,7 @@ delRowFoo("mouseleave", "1");
 let Printbutton = document.getElementById("Printbutton");
 
 Printbutton.addEventListener("click", () => {
-  var element = document.getElementsByClassName("invoice")[0];
+  var element = document.getElementsByTagName("html")[0];
   var opt = {
     margin:       0,
     filename:     'myfile.pdf',
@@ -178,4 +189,13 @@ Printbutton.addEventListener("click", () => {
 };
   html2pdf().from(element).set(opt).save();
   Printbutton.style.display = 'none';
+  viewport = document.querySelector("meta[name=viewport]");
+viewport.setAttribute('content', 'width=device-width, initial-scale=0.1, maximum-scale=0.1');
+document.getElementById('removeClass').classList.remove('container');
+document.getElementsByClassName('logined')[0].style.width = '100%';
+document.getElementsByClassName('logined')[0].style.width = '100%';
+document.getElementById('hideInpdf').style.display = 'none';
+setTimeout(() => {
+  window.location.reload();
+}, 1000);
 });
