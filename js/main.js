@@ -180,16 +180,9 @@ let Printbutton = document.getElementById("Printbutton");
 
 Printbutton.addEventListener("click", () => {
   var element = document.getElementsByTagName("html")[0];
-  var opt = {
-    margin:       0,
-    filename:     'myfile.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 3, scrollY: 0 },
-    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-};
-setTimeout(() => {
-  html2pdf().from(element).set(opt).save();
-}, 1000);
+
+
+
   Printbutton.style.display = 'none';
   viewport = document.querySelector("meta[name=viewport]");
 viewport.setAttribute('content', 'width=device-width, initial-scale=0.1, maximum-scale=0.1');
@@ -197,6 +190,18 @@ document.getElementById('removeClass').classList.remove('container');
 document.getElementsByClassName('logined')[0].style.width = '100%';
 document.getElementsByClassName('logined')[0].style.width = '100%';
 document.getElementById('hideInpdf').style.display = 'none';
+
+setTimeout(() => {
+  var opt = {
+    margin:       0,
+    filename:     'invoice.pdf',
+    image:        { type: 'jpeg', quality: 1 },
+    html2canvas:  { scale: 1 },
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+};
+html2pdf().set(opt).from(element).save();
+}, 1000);
+pdf.save('invoice.pdf');
 setTimeout(() => {
   window.location.reload();
 }, 2000);
